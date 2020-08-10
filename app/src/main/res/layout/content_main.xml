@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:id="@+id/contentMainLogInTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please log in"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/contentMainMessageTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="message:"/>
+
+    <ImageButton
+        android:id="@+id/contentMainSendMessageBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_menu_send"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="@+id/contentMainMessageTxt"
+        app:layout_constraintBottom_toBottomOf="@+id/contentMainMessageTxt"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#00000000"
+        android:onClick="sendMessageBtnClick"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentMainLogInTitle"
+        app:layout_constraintBottom_toTopOf="@+id/contentMainMessageTxt"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
