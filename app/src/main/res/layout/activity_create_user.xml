@@ -6,4 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".CreateUserActivity">
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/createUserNameTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="user name"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/createEmailTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="email"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createUserNameTxt"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/createPasswordTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createEmailTxt"/>
+
+    <TextView
+        android:id="@+id/generateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to generate user avatar"
+        android:layout_marginTop="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createPasswordTxt"/>
+
+    <ImageView
+        android:id="@+id/createAvatarImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/profiledefault"
+        android:layout_marginTop="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/generateTxt"
+        android:onClick="generateUserAvatar"/>
+
+    <Button
+        android:id="@+id/backgroundColorBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Generate background color"
+        android:textColor="@color/cardview_light_background"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/createAvatarImg"
+        android:onClick="generateColorClicked"/>
+
+    <Button
+        android:id="@+id/createUserBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Create user"
+        android:textColor="@color/cardview_light_background"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="createUserClicked"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
