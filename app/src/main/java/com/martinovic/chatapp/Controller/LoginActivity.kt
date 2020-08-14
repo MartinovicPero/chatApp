@@ -1,9 +1,10 @@
-package com.martinovic.chatapp
+package com.martinovic.chatapp.Controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.martinovic.chatapp.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
